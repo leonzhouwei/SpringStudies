@@ -1,4 +1,4 @@
-package main;
+package test;
 
 import main.java.com.bjsxt.model.Account;
 import main.java.com.bjsxt.service.AccountService;
@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
 	
 	public static void main(String[] args) {
-		String[] configLocations = { "classpath:beans.xml" };
+		String[] configLocations = { "classpath:/spring/appconfig/beans.xml" };
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(configLocations);
 		
 		AccountService service = (AccountService)ctx.getBean("accountService");
@@ -20,4 +20,5 @@ public class Main {
 		account.setPassword(password);
 		service.add(account);
 	}
+	
 }
