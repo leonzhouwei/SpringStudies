@@ -11,20 +11,16 @@
            http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 	<context:annotation-config />
 	<context:component-scan base-package="com.bjsxt" />
-
+	
+    <context:property-placeholder location="jdbc.properties"/>
+    
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="driverClassName" value="org.postgresql.Driver" />
-		<property name="url" value="jdbc:postgresql://localhost:5432/spring" />
-		<property name="username" value="spring" />
-		<property name="password" value="bjsxt" />
-	</bean>
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
 
 	<bean id="logInterceptor" class="com.bjsxt.aop.LogInterceptor" />
-	<aop:config>
-		<aop:pointcut id="servicePointcut" expression="execution(public * com.bjsxt.service..*.add(..))" />
-		<aop:aspect id="logAspect" ref="logInterceptor">
-			<aop:before method="before" pointcut-ref="servicePointcut" />
-		</aop:aspect>
-	</aop:config>
 
 </beans>
