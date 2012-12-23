@@ -1,11 +1,11 @@
-package test;
+package main.java.com.bjsxt;
 
 import main.java.com.bjsxt.model.Account;
 import main.java.com.bjsxt.service.AccountService;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Main {
+public class Startup {
 	
 	public static void main(String[] args) {
 		String[] configLocations = { "classpath:/spring/appconfig/beans.xml" };
