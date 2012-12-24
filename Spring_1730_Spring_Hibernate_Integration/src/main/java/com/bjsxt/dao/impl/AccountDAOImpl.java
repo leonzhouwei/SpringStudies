@@ -1,9 +1,9 @@
-package main.java.com.bjsxt.dao.impl;
+package com.bjsxt.dao.impl;
 
 import javax.annotation.Resource;
 
-import main.java.com.bjsxt.dao.AccountDAO;
-import main.java.com.bjsxt.model.Account;
+import com.bjsxt.dao.AccountDAO;
+import com.bjsxt.model.Account;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

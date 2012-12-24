@@ -1,4 +1,4 @@
-package main.java.com.bjsxt.dao.impl;
+package com.bjsxt.dao.impl;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -6,8 +6,8 @@ import java.sql.SQLException;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 
-import main.java.com.bjsxt.dao.AccountDAO;
-import main.java.com.bjsxt.model.Account;
+import com.bjsxt.dao.AccountDAO;
+import com.bjsxt.model.Account;
 
 import org.springframework.stereotype.Component;
 

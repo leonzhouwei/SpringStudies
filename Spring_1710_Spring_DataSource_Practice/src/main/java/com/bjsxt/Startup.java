@@ -1,14 +1,16 @@
-package main.java.com.bjsxt;
+package com.bjsxt;
 
-import main.java.com.bjsxt.model.Account;
-import main.java.com.bjsxt.service.AccountService;
+import com.bjsxt.model.Account;
+import com.bjsxt.service.AccountService;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Startup {
 	
 	public static void main(String[] args) {
-		String[] configLocations = { "classpath:/spring/appconfig/beans.xml" };
+		String[] configLocations = {
+			"/spring/appconfig/beans.xml"
+		};
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(configLocations);
 		
 		AccountService service = (AccountService)ctx.getBean("accountService");

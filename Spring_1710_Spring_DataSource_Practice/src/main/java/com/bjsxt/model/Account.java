@@ -1,4 +1,4 @@
-package main.java.com.bjsxt.model;
+package com.bjsxt.model;
 
 public class Account {
 	

@@ -1,4 +1,4 @@
-package main.java.com.bjsxt.model;
+package com.bjsxt.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

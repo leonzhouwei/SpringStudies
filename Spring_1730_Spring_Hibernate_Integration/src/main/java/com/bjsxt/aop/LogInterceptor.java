@@ -1,4 +1,4 @@
-package main.java.com.bjsxt.aop;
+package com.bjsxt.aop;
 
 public class LogInterceptor {
 	
