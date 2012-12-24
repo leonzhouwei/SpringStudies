@@ -1,6 +1,6 @@
-package main.java.com.bjsxt.dao;
+package com.bjsxt.dao;
 
-import main.java.com.bjsxt.model.Account;
+import com.bjsxt.model.Account;
 
 public interface AccountDAO {
 	

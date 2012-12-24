@@ -1,13 +1,14 @@
-package main.java.com.bjsxt.service;
+package com.bjsxt.service;
 
 import javax.annotation.Resource;
 
-import main.java.com.bjsxt.dao.AccountDAO;
-import main.java.com.bjsxt.model.Account;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.bjsxt.dao.AccountDAO;
+import com.bjsxt.model.Account;
 
 @Component
 public class AccountService {
