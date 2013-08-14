@@ -1,4 +1,4 @@
-package com.example.zhouwei.spring.dao;
+package com.example.zhouwei.spring;
 
 import javax.annotation.Resource;
 
@@ -7,19 +7,18 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 
 import com.example.zhouwei.spring.model.User;
+import com.example.zhouwei.spring.service.UserService;
 
 @ContextConfiguration("classpath:beans.xml")
-public class UserDaoTest extends AbstractJUnit4SpringContextTests {
-
-	@Resource(name="userDao")
-	private UserDao userDao;
+public class UserServiceTest extends AbstractJUnit4SpringContextTests {
+	
+	@Resource(name="userService")
+	private UserService userService;
 	
 	@Test
-	public void testSave() {
+	public void testAdd() throws Exception {
 		User user = new User();
-		user.setUsername("alice");
-		user.setPassword("alice");
-		this.userDao.save(user);
+		userService.add(user);
 	}
 	
 }

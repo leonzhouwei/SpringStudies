@@ -12,4 +12,5 @@ public class UserDaoTest2 {
 		UserDao userDao = context.getBean("userDao", UserDao.class);
 		System.out.println(userDao);
 	}
+	
 }
